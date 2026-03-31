@@ -20,7 +20,7 @@ int mySqrt(int x) {
             result = mid;
             break;
         }
-        else if(mid <= x/mid)            //x/mid denmesinin sebebi ->  mid*mid <= x ~(midlerden biri karşıya 1/mid olarak geçti)~ mid  <= (x* (1/mid))  yani   mid <= x/mid oldu. 
+        else if(mid <= x/mid)            //x/mid denmesinin sebebi ->  mid*mid <= x ~(midlerden biri karşıya 1/mid olarak geçti)~ mid  <= (x* (1/mid))  yani   mid <= x/mid oldu. Overflow'u engellemek için mükemmel bir hamle. 
         {
             left = mid + 1;
             result = mid;
